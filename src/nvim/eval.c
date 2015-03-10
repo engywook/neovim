@@ -3830,7 +3830,8 @@ eval6 (
   int op;
   long n1, n2;
   int use_float = FALSE;
-  float_T f1 = 0, f2;
+  float_T f1 = 0;
+  float_T f2 = 0;
   int error = FALSE;
 
   /*
@@ -18985,7 +18986,7 @@ call_user_func (
   char_u numbuf[NUMBUFLEN];
   char_u      *name;
   proftime_T wait_start;
-  proftime_T call_start;
+  proftime_T call_start = 0;
   bool did_save_redo = false;
 
   /* If depth of calling is getting too high, don't execute the function */

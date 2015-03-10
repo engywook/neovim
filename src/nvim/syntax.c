@@ -3896,7 +3896,7 @@ get_syn_options (
 {
   char_u      *gname_start, *gname;
   int syn_id;
-  int len;
+  int len = 0;
   char        *p;
   int fidx;
   static struct flag {

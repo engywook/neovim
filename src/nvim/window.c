@@ -3176,8 +3176,8 @@ static void enter_tabpage(tabpage_T *tp, buf_T *old_curbuf, int trigger_enter_au
  */
 void goto_tabpage(int n)
 {
-  tabpage_T   *tp;
-  tabpage_T   *ttp;
+  tabpage_T   *tp = NULL;
+  tabpage_T   *ttp = NULL;
   int i;
 
   if (text_locked()) {
@@ -3225,8 +3225,7 @@ void goto_tabpage(int n)
     }
   }
 
-  goto_tabpage_tp(tp, TRUE, TRUE);
-
+    goto_tabpage_tp(tp, TRUE, TRUE);
 }
 
 /*
